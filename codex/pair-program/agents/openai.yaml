@@ -1,0 +1,7 @@
+interface:
+    display_name: "Pair Program"
+    short_description: "Previewed pair-programming loop"
+    default_prompt: "Use $pair-program for collaborative coding with previewed, approved hunks."
+
+policy:
+    allow_implicit_invocation: false
