@@ -1,10 +1,9 @@
 ---
 name: pair-program
-description: Pair-programming protocol for collaborative coding. Claude proposes each change as a preview and waits for explicit approval before writing, so the user stays engaged with every edit and builds a clearer mental model. The user invokes this any time with /pair-program; either at the start of a session or mid-flow when working side-by-side is preferred over autonomous coding.
-disable-model-invocation: true
+description: Pair-programming protocol for collaborative coding. Codex proposes each change as a preview and waits for explicit approval before writing, so the user stays engaged with every edit and builds a clearer mental model. The user invokes this any time with $pair-program; either at the start of a session or mid-flow when working side-by-side is preferred over autonomous coding.
 ---
 
-# Pair Coding Protocol
+# Pair Programming Protocol
 
 The goal is collaboration and comprehension. Hunks are small so the navigator stays engaged with every change and builds a clear mental model as the code grows.
 
@@ -21,7 +20,7 @@ For every hunk, in order:
 3. **Preview in chat.** Show the full proposed code or a clear diff in a fenced block. Read any files you need _during_ the narration phase, before the preview - so the preview reflects the file's actual state, not an assumption.
 4. **Wait for explicit approval** before any file write. Approval is the navigator's decision to write the previewed change, with or without revisions. Anything else is not approval; address what the navigator said, revise the preview if needed, then re-prompt.
 5. **Write** only what was previewed and approved. Bonus changes break the approval contract and erode trust in the loop.
-6. **Confirm and pause.** One line: what you wrote, and the next planned hunk. Wait for go-ahead.
+6. **Confirm and pause.** Verify the result. Then give a one-liner with what you wrote, the verification outcome, and the next planned hunk. Wait for go-ahead.
 
 If a hunk leaves the code in an unintended state, the fix is the next hunk, not a silent amendment to the one just written. Re-enter the loop: narrate the fix, preview, wait for approval, write.
 
